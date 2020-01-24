@@ -22,21 +22,21 @@ Answer the following questions. First, without external resources. Challenge you
 
 2. Using the information given, fill in the blanks to complete the steps for creating a new view in a Rails application.
 
-  Step 1: Create the route_________ in the file config/routes.rb
+  Step 1: Create the route in the file config/routes.rb
   ```
   get '/about' => 'statics#about'
   ```
 
-  Step 2: Create the Controller____________ in the file controller_____________
+  Step 2: Create the Controller in the file statics_controller.rb
   ```
-  class Controller ____________ < ApplicationController
-    def view___________
-      render html: view________________
+  class StaticsController < ApplicationController
+    def about
+      render "about.html.erb"
     end
   end
   ```
 
-  Step 3: Create the View in the file html.erb______________
+  Step 3: Create the View in the file about html.erb
   code:
   ```
   <div>This is the About page!</div>
